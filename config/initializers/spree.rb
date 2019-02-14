@@ -13,6 +13,8 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+  
+  # config.i18n.default_locale = 'es-MX'
 end
 
 # Configure Spree Dependencies
@@ -28,3 +30,4 @@ end
 
 
 Spree.user_class = "Spree::User"
+Rails.application.config.i18n.default_locale = 'es-MX'
