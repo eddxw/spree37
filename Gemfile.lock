@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/spree-contrib/better_spree_paypal_express.git
+  revision: 962a789738b59f440bf44ea22e64b65cc2572535
+  specs:
+    spree_paypal_express (3.3.0)
+      paypal-sdk-merchant
+      spree_auth_devise (>= 3.1.0, < 4.0)
+      spree_core (>= 3.1.0, < 4.0)
+      spree_extension
+
+GIT
   remote: https://github.com/spree-contrib/spree_editor.git
   revision: aa7f8b6474b6fd4dbad516f115e2b1cac65c33cb
   specs:
@@ -284,6 +294,11 @@ GEM
       terrapin (~> 0.6.0)
     paranoia (2.4.1)
       activerecord (>= 4.0, < 5.3)
+    paypal-sdk-core (0.3.4)
+      multi_json (~> 1.0)
+      xml-simple
+    paypal-sdk-merchant (1.117.2)
+      paypal-sdk-core (~> 0.3.0)
     pg (1.1.4)
     polyglot (0.3.5)
     premailer (1.11.1)
@@ -486,6 +501,7 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    xml-simple (1.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -510,6 +526,7 @@ DEPENDENCIES
   spree_editor!
   spree_gateway (~> 3.4)
   spree_i18n!
+  spree_paypal_express!
   spree_social!
   spree_volume_pricing!
   spring
