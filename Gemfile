@@ -67,3 +67,6 @@ gem 'spree_gateway', '~> 3.4'
 
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 gem 'spree_social', github: 'spree-contrib/spree_social'
+gem 'spree_editor', github: 'spree-contrib/spree_editor'
+gem 'tinymce-rails-langs'
+gem 'spree_volume_pricing',  github: 'spree-contrib/spree_volume_pricing'
