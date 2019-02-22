@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_14_211256) do
+ActiveRecord::Schema.define(version: 2019_02_22_021439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -364,6 +364,8 @@ ActiveRecord::Schema.define(version: 2019_02_14_211256) do
     t.integer "state_lock_version", default: 0, null: false
     t.decimal "taxable_adjustment_total", precision: 10, scale: 2, default: "0.0", null: false
     t.decimal "non_taxable_adjustment_total", precision: 10, scale: 2, default: "0.0", null: false
+    t.integer "salesman_id"
+    t.boolean "is_pos", default: false
     t.index ["approver_id"], name: "index_spree_orders_on_approver_id"
     t.index ["bill_address_id"], name: "index_spree_orders_on_bill_address_id"
     t.index ["canceler_id"], name: "index_spree_orders_on_canceler_id"
@@ -371,6 +373,7 @@ ActiveRecord::Schema.define(version: 2019_02_14_211256) do
     t.index ["confirmation_delivered"], name: "index_spree_orders_on_confirmation_delivered"
     t.index ["considered_risky"], name: "index_spree_orders_on_considered_risky"
     t.index ["created_by_id"], name: "index_spree_orders_on_created_by_id"
+    t.index ["is_pos"], name: "index_spree_orders_on_is_pos"
     t.index ["number"], name: "index_spree_orders_on_number", unique: true
     t.index ["ship_address_id"], name: "index_spree_orders_on_ship_address_id"
     t.index ["store_id"], name: "index_spree_orders_on_store_id"
@@ -415,6 +418,7 @@ ActiveRecord::Schema.define(version: 2019_02_14_211256) do
     t.string "number"
     t.string "cvv_response_code"
     t.string "cvv_response_message"
+    t.string "card_name"
     t.index ["number"], name: "index_spree_payments_on_number", unique: true
     t.index ["order_id"], name: "index_spree_payments_on_order_id"
     t.index ["payment_method_id"], name: "index_spree_payments_on_payment_method_id"
@@ -756,6 +760,8 @@ ActiveRecord::Schema.define(version: 2019_02_14_211256) do
     t.decimal "pre_tax_amount", precision: 12, scale: 4, default: "0.0", null: false
     t.decimal "taxable_adjustment_total", precision: 10, scale: 2, default: "0.0", null: false
     t.decimal "non_taxable_adjustment_total", precision: 10, scale: 2, default: "0.0", null: false
+    t.datetime "delivered_at"
+    t.datetime "canceled_at"
     t.index ["address_id"], name: "index_spree_shipments_on_address_id"
     t.index ["number"], name: "index_spree_shipments_on_number", unique: true
     t.index ["order_id"], name: "index_spree_shipments_on_order_id"
@@ -867,11 +873,15 @@ ActiveRecord::Schema.define(version: 2019_02_14_211256) do
     t.boolean "backorderable_default", default: false
     t.boolean "propagate_all_variants", default: true
     t.string "admin_name"
+    t.boolean "store", default: false
+    t.integer "address_id"
     t.index ["active"], name: "index_spree_stock_locations_on_active"
+    t.index ["address_id"], name: "index_spree_stock_locations_on_address_id"
     t.index ["backorderable_default"], name: "index_spree_stock_locations_on_backorderable_default"
     t.index ["country_id"], name: "index_spree_stock_locations_on_country_id"
     t.index ["propagate_all_variants"], name: "index_spree_stock_locations_on_propagate_all_variants"
     t.index ["state_id"], name: "index_spree_stock_locations_on_state_id"
+    t.index ["store"], name: "index_spree_stock_locations_on_store"
   end
 
   create_table "spree_stock_movements", id: :serial, force: :cascade do |t|
@@ -1070,6 +1080,11 @@ ActiveRecord::Schema.define(version: 2019_02_14_211256) do
     t.index ["user_id"], name: "index_spree_user_authentications_on_user_id"
   end
 
+  create_table "spree_user_stores", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "stock_location_id"
+  end
+
   create_table "spree_users", id: :serial, force: :cascade do |t|
     t.string "encrypted_password", limit: 128
     t.string "password_salt", limit: 128
@@ -1100,6 +1115,7 @@ ActiveRecord::Schema.define(version: 2019_02_14_211256) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.string "complete_name"
     t.index ["bill_address_id"], name: "index_spree_users_on_bill_address_id"
     t.index ["deleted_at"], name: "index_spree_users_on_deleted_at"
     t.index ["email"], name: "email_idx_unique", unique: true
@@ -1124,6 +1140,7 @@ ActiveRecord::Schema.define(version: 2019_02_14_211256) do
     t.datetime "updated_at", null: false
     t.datetime "discontinue_on"
     t.datetime "created_at", null: false
+    t.string "ean"
     t.index ["deleted_at"], name: "index_spree_variants_on_deleted_at"
     t.index ["discontinue_on"], name: "index_spree_variants_on_discontinue_on"
     t.index ["is_master"], name: "index_spree_variants_on_is_master"

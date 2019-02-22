@@ -71,3 +71,7 @@ gem 'spree_editor', github: 'spree-contrib/spree_editor'
 gem 'tinymce-rails-langs'
 gem 'spree_volume_pricing',  github: 'spree-contrib/spree_volume_pricing'
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express'
+
+#--------------------
+gem 'spree_html_invoice', path: '../spree-html-invoice'
+gem 'spree-point-of-sale', path: '../spree-point-of-sale'

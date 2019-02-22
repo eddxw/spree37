@@ -12,3 +12,4 @@
 //= require spree/backend/spree_i18n
 //= require spree/backend/spree_volume_pricing
 //= require spree/backend/spree_paypal_express
+//= require admin/spree_pos
