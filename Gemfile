@@ -48,6 +48,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'pry'
+  gem 'awesome_print'
+  gem 'figaro'
+  gem 'hirb'
+  gem 'meta_request'
 end
 
 group :test do
@@ -71,7 +76,17 @@ gem 'spree_editor', github: 'spree-contrib/spree_editor'
 gem 'tinymce-rails-langs'
 gem 'spree_volume_pricing',  github: 'spree-contrib/spree_volume_pricing'
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express'
+gem 'spree_admin_roles_and_access', github: 'vinsol-spree-contrib/spree_admin_roles_and_access'
 
 #--------------------
+# gem 'ajax-datatables-rails'
+
 gem 'spree_html_invoice', path: '../spree-html-invoice'
 gem 'spree-point-of-sale', path: '../spree-point-of-sale'
+
+gem 'semantic-ui-sass'
+#gem 'jquery-rails'
+
+gem 'ajax-datatables-rails'
+gem 'yajl-ruby', require: 'yajl'
+gem 'draper'
