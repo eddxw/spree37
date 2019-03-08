@@ -77,6 +77,7 @@ gem 'tinymce-rails-langs'
 gem 'spree_volume_pricing',  github: 'spree-contrib/spree_volume_pricing'
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express'
 gem 'spree_admin_roles_and_access', github: 'vinsol-spree-contrib/spree_admin_roles_and_access'
+gem 'spree_slider', github: 'spree-contrib/spree_slider'
 
 #--------------------
 # gem 'ajax-datatables-rails'

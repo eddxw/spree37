@@ -22,8 +22,6 @@
   <%= form.select(:stock_location ,options_for_select(Spree::StockLocation.all.map { |stock_location| [stock_location.name, stock_location.id]}, 1) , {},onchange: '$(this.form).submit(); this.disabled = true;',class: 'form-control')%>
 <% end %>
 
-<% console %>
-
 <table id="stock_items-datatable" class="ui celled compact blue unstackable table" style="width:100%" data-source="<%= admin_stock_items_path(format: :json) %>">
   <thead>
     <tr>

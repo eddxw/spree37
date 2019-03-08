@@ -1,19 +1,23 @@
-$import-google-fonts: true !default;
-$font-url: 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin,latin-ext' !default;
-$font-name: 'Lato' !default;
-$font-family: $font-name, 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
+// $import-google-fonts: true !default;
+// $font-url: 'https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin,latin-ext' !default;
+// $font-name: 'Lato' !default;
+// $font-family: $font-name, 'Helvetica Neue', Arial, Helvetica, sans-serif !default;
 
 // @import "semantic-ui/modules/dropdown";
 
-@import "semantic-ui/collections/table";
-@import "semantic-ui/collections/menu";
-@import "semantic-ui/collections/grid";
-@import "semantic-ui/collections/form";
+// @import "semantic-ui/collections/table";
+// @import "semantic-ui/collections/menu";
+// @import "semantic-ui/collections/grid";
+// @import "semantic-ui/collections/form";
 
-@import "semantic-ui/elements/icon";
-@import "semantic-ui/elements/input";
-@import "semantic-ui/elements/button";
+// @import "semantic-ui/elements/icon";
+// @import "semantic-ui/elements/input";
+// @import "semantic-ui/elements/button";
 
-@import "semantic-ui/views/item";
+// @import "semantic-ui/views/item";
 
-// @import "semantic-ui";
+@import "semantic-ui";
+
+#main-part{
+  padding: 45px 35px 0;
+}

@@ -15,3 +15,4 @@
 //= require admin/spree_pos
 
 //= require spree/backend/spree_admin_roles_and_access
+//= require semantic-ui

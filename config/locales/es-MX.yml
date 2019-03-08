@@ -13,6 +13,8 @@ es-MX:
     config_name: "Localizacion Diapositivas"
   active_shipping_settings: "Configuracion Active Shipping"
   spree:
+    or: "ó"
+    unable_to_access_requested_resource: No se puede acceder al recurso solicitado
     themes: Temas
     vinsol_spree_themes: Tema
     templates: Templates
@@ -20,8 +22,8 @@ es-MX:
     format: Format
     handler: Handler
     body: Body
-    name: Name
-    state: Theme State
+    name: Nombre
+    state: Estado
     theme_states:
       compiled: Compilado
       drafted: Draft

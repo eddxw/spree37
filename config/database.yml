@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: spree37_production
-  username: spree37
-  password: <%= ENV['SPREE37_DATABASE_PASSWORD'] %>
+  # username: spree37
+  # password: <%= ENV['SPREE37_DATABASE_PASSWORD'] %>

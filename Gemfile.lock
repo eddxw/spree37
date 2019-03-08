@@ -32,6 +32,14 @@ GIT
       spree_extension
 
 GIT
+  remote: https://github.com/spree-contrib/spree_slider.git
+  revision: 534fed21ae50a7ac44472f5884a7c1df981e4ef3
+  specs:
+    spree_slider (3.3.0)
+      spree_backend (>= 3.1.0, < 4.0)
+      spree_core (>= 3.1.0, < 4.0)
+
+GIT
   remote: https://github.com/spree-contrib/spree_social.git
   revision: 2e6390d8b7ac41ddc4149fd65f4be49f16b21a3a
   specs:
@@ -72,7 +80,7 @@ PATH
 PATH
   remote: ../spree-point-of-sale
   specs:
-    spree-point-of-sale (3.6.4)
+    spree-point-of-sale (3.6.5)
       barby
       chunky_png
       prawn
@@ -236,7 +244,7 @@ GEM
     highline (2.0.1)
     hirb (0.7.3)
     htmlentities (4.3.4)
-    i18n (1.5.3)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     i18n_data (0.10.0)
     io-like (0.3.0)
@@ -600,6 +608,7 @@ DEPENDENCIES
   spree_html_invoice!
   spree_i18n!
   spree_paypal_express!
+  spree_slider!
   spree_social!
   spree_volume_pricing!
   spring
