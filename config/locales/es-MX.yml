@@ -13,6 +13,27 @@ es-MX:
     config_name: "Localizacion Diapositivas"
   active_shipping_settings: "Configuracion Active Shipping"
   spree:
+    spree_tracking:
+      action: Acción
+      action_performed_at: Acción realizada el
+      actions_performed_from: Acciones realizadas desde
+      actions_performed_upto: Acciones realizadas hasta
+      controller: Controller
+      entity_id: Entity ID
+      entity_type: Entity Type
+      entity_errors: Entity Errors
+      entity_errors_cont: Entity Error Message Contains
+      flash_cont: Flash Message Contains
+      ip_address: IP Address
+      response_code: Response Code
+      request_parameters: Request Parameters
+      request_parameters_cont: Request Parameters Contains
+      title: Admin Activity Tracking
+      updated_parameters: Updated Parameters
+      user_email: User Email
+      view: Ver
+      from: desde
+      upto: hasta
     or: "ó"
     unable_to_access_requested_resource: No se puede acceder al recurso solicitado
     themes: Temas
@@ -91,49 +112,49 @@ es-MX:
     insight:
       heading: 'Insights: %{type}'
       tab_heading: Insights
-      not_found: Report not found.
+      not_found: Reporte no encontrado.
       product_views:
-        title:  Product Show Page Views
-        description: To fetch the number of times Product Show page is viewed by the Customers.
-        product_name: Product
-        views: Total Views
-        users: Users(Unique)
-        guest_sessions: Guest Sessions
+        title:  Vistas de productos
+        description: Para obtener el número de veces que los clientes ven la página de demostración del producto.
+        product_name: Producto
+        views: Vistas totales
+        users: Usuarios(Único)
+        guest_sessions: Sesiones de invitados
       cart_additions:
-        title: Product Add to cart
-        additions: Additions
-        description: Will project the data about how many times product has been added to the cart.
-        product_name: Product
-        quantity_change: Cart Addition(Qty)
-        sku: Variant
+        title: Producto añadido al carrito
+        additions: Adiciones
+        description: Proyectará los datos sobre cuántas veces se ha agregado el producto al carrito.
+        product_name: Producto
+        quantity_change: Añadidos
+        sku: Variante
       cart_removals:
-        title: Product Removed from cart
-        description: Will project the data about how many time product has been removed from cart.
-        product_name: Product
-        quantity_change: Cart Removal(Qty)
-        removals: Removals
-        sku: Variant
+        title: Producto removido del carrito
+        description: Proyectará los datos sobre la cantidad de tiempo que el producto ha sido retirado del carrito.
+        product_name: Producto
+        quantity_change: Sustraídos
+        removals: Removidos
+        sku: Variante
       cart_updations:
-        title: Product Updation
-        description: Will project the data about how many times product has been updated from the cart.
-        product_name: Product
-        quantity_decrease: Quantity Decreased(From Cart)
-        quantity_increase: Quantity Increased(From Cart)
-        removals: Quantity Removed(From Cart)
-        sku: Variant
-        updations: Total Updation Requests
+        title: Cambios de un producto en el carrito
+        description: Proyectará los datos sobre cuántas veces se ha actualizado el producto desde el carrito.
+        product_name: Producto
+        quantity_decrease: Sustraídos
+        quantity_increase: Añadidos
+        removals: Removidos
+        sku: Variante
+        updations: Total de actualizaciones
       product_views_to_cart_additions:
-        title: Product 'Views' To 'Cart Additions'
-        description: Ratio of number of views (on product show page) to number of times product has been added to the cart after view.
-        cart_additions: Conversion to cart (product qty.)
-        product_name: Product
-        views: Show page views
-        cart_to_view_ratio: Cart To View Ratio
+        title: Producto 'Vistas' a 'Adiciones del carrito'
+        description: Relación entre el número de vistas (en la página de presentación del producto) y el número de veces que el producto se ha agregado al carrito después de la vista.
+        cart_additions: Adicciones al carrito
+        product_name: Producto
+        views: Vistas a pagina del producto
+        cart_to_view_ratio: Relación carrito - vistas
       trending_search:
-        title: Trending Searches
-        description: You can view/search list of keywords which have been searched by customers.
-        searched_term: Searched Term
-        occurrences: Occurrences
+        title: Tendencias de busqueda
+        description: Puede ver / buscar la lista de palabras clave que han sido buscadas por los clientes.
+        searched_term: Término buscado
+        occurrences: Ocurrencias
       users_not_converted:
         title: Users Not Converted
         description: Information about number of registered users who haven’t purchased any product after registration.
@@ -223,18 +244,18 @@ es-MX:
         views: Views
         purchase_to_view_ratio: Purchase To View Ratio
       returned_products:
-        title: Product Returned
-        description: Number of products returned
-        product_name: Product
-        return_count: Returned Count
-        sku: Variant
+        title: Producto Regresado
+        description: Número de productos devueltos
+        product_name: Producto
+        return_count: Recuento devuelto
+        sku: Variante
       shipping_cost:
-        title: Shipping Cost
-        name: Shipping Method Name
+        title: Costo de envío
+        name: Nombre del método de envío
         months_name: Month
-        shipping_charge: Shipping Charge
-        revenue: Revenue
-        shipping_cost_percentage: Shipping Cost %
+        shipping_charge: Costo de envío
+        revenue: Ingresos
+        shipping_cost_percentage:  Costo de envio %
       sales_tax:
         title: Sales Tax
         months_name: Month
@@ -264,7 +285,7 @@ es-MX:
     street_address_2: "Dirección (Número exterior/interior)"
     searchgoogle: "Buscar domicilio"
     show_discontinued: "Mostrar descontinuados"
-    stock: "Existencias (Stock, Inventario)"
+    stock: "Existencias (Inventario)"
     product_packages: Paquetes (Bundles)
     i18n:
       locales_displayed_on_frontend_select_box: "Idiomas que se muestran en la tienda"
@@ -322,7 +343,7 @@ es-MX:
         footer_left: Contenido del pie izquierdo
         footer_left_info: Por ejemplo Nombre de su empresa y la dirección.
         footer_right: Contenido del pie derecho
-        footer_right_info: Por ejemplo Su teléfono y correo electrónico.
+        footer_right_info: Por ejemplo su teléfono y correo electrónico.
         page_layout: Diseño de página
         page_size: Tamaño de página
         print_buttons: Botones de imprimir
@@ -331,8 +352,8 @@ es-MX:
         return_message: Mensaje de vuelta del pedido
         font_face: Tipo de letra
         font_size: Tamaño de letra
-        store_pdf: Store PDF files
-        storage_path: PDF storage path
+        store_pdf: Guardar archivo en PDF
+        storage_path: Dirección de almacenamionto del PDF
       settings: Configuración de impresión de facturas
       unprocessed: No procesado
       vat: IVA no aplicable
@@ -353,13 +374,13 @@ es-MX:
       thanks: ""
       print: Factura
     packaging_slip:
-      header: Packaging Slip
-      print: Print Slip
-      thanks: Please check the contents immediately.
+      header: Hoja de embalaje
+      print: Imprimir hoja de embalaje
+      thanks: Favor de checar el contenido de inmediato
     reminder:
-      header: Payment Reminder
-      print: Reminder
-      thanks: Our system has not registered any payment for this Invoice. We kindly request you correct this situation.
+      header: Recordatorio de pago
+      print: Recordatorio
+      thanks: Nuestro sistema no ha registrado ningún pago por esta factura. Le rogamos que corrija esta situación.
     receipt:
       header: Recibo
       print: Recibo

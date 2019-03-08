@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_27_095911) do
+ActiveRecord::Schema.define(version: 2019_03_08_223306) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -317,6 +317,20 @@ ActiveRecord::Schema.define(version: 2019_02_27_095911) do
     t.index ["name"], name: "index_spree_option_values_on_name"
     t.index ["option_type_id"], name: "index_spree_option_values_on_option_type_id"
     t.index ["position"], name: "index_spree_option_values_on_position"
+  end
+
+  create_table "spree_order_events_trackers", id: :serial, force: :cascade do |t|
+    t.text "entity_errors"
+    t.text "flash"
+    t.text "request_parameters"
+    t.text "updated_parameters"
+    t.string "ip_address"
+    t.string "entity_type"
+    t.integer "response_code"
+    t.integer "user_id"
+    t.integer "order_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "spree_order_promotions", id: :serial, force: :cascade do |t|
@@ -1140,6 +1154,20 @@ ActiveRecord::Schema.define(version: 2019_02_27_095911) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "engine", default: 0, null: false
     t.index ["active"], name: "index_spree_trackers_on_active"
+  end
+
+  create_table "spree_trackings", force: :cascade do |t|
+    t.text "entity_errors"
+    t.text "flash"
+    t.text "request_parameters"
+    t.text "updated_parameters"
+    t.string "ip_address"
+    t.string "entity_type"
+    t.integer "response_code"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_spree_trackings_on_user_id"
   end
 
   create_table "spree_user_authentications", id: :serial, force: :cascade do |t|

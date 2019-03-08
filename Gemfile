@@ -91,3 +91,7 @@ gem 'semantic-ui-sass'
 gem 'ajax-datatables-rails'
 gem 'yajl-ruby', require: 'yajl'
 gem 'draper'
+
+gem 'spree_order_events_tracker', github: 'vinsol-spree-contrib/spree_order_events_tracker', :branch => "develop"
+gem 'spree_admin_activity_tracker', github: 'vinsol-spree-contrib/spree_admin_activity_tracker', branch: 'develop'
+gem 'vertical-timeline-rails'
